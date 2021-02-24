@@ -192,6 +192,20 @@ const Shorten = () => {
     }
   };
 
+  const copyUrl = () => {
+    navigator.clipboard.writeText(url);
+    toast.info("Copied!", {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      pauseOnFocusLoss: false,
+      draggable: false,
+      progress: undefined,
+    });
+  };
+
   return (
     <>
       <Header />
@@ -223,7 +237,7 @@ const Shorten = () => {
             <UrlContainter>
               <H2>Your shortened link is...</H2>
               <ReadOnlyInput value={url} readOnly></ReadOnlyInput>
-              <Button>Copy</Button>
+              <Button onClick={copyUrl}>Copy</Button>
             </UrlContainter>
             <UrlContainter>
               <H2>QR Code</H2>
