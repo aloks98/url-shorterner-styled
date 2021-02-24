@@ -8,7 +8,6 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 `;
 
 const Image = styled.img`
@@ -19,7 +18,7 @@ const Image = styled.img`
 `;
 
 const FooterInfo = styled.p`
-    color: white;
+  color: white;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -29,7 +28,7 @@ const FooterInfo = styled.p`
 const Footer = () => {
   return (
     <FooterContainer>
-        <FooterInfo>Made with 💝 by</FooterInfo>
+      <FooterInfo>Made with 💝 by</FooterInfo>
       <Image src={logo} alt="aloks.dev" />
     </FooterContainer>
   );

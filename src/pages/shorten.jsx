@@ -157,7 +157,7 @@ const Shorten = () => {
   const onSubmit = async (data) => {
     if (data.slug === "") {
       try {
-        console.log(ANON_SHORTEN_URL)
+        console.log(ANON_SHORTEN_URL);
         const res = await axios.post(ANON_SHORTEN_URL, { url: data.url });
         setUrl("https://skipto.site/" + res.data.slug);
       } catch (error) {
@@ -224,12 +224,9 @@ const Shorten = () => {
               <H2>Your shortened link is...</H2>
               <ReadOnlyInput value={url} readOnly></ReadOnlyInput>
               <Button>Copy</Button>
-
             </UrlContainter>
             <UrlContainter>
-              <H2>
-                QR Code
-              </H2>
+              <H2>QR Code</H2>
               <QRContainer>
                 <QRCode
                   id="qrcode"
